@@ -102,13 +102,10 @@ h3 {
 }
 
 /*Game specific stuff*/
-.gameContainer {
-    display: flex;
-    justify-content: space-between;
-}
 
 .instructions {
     line-height: var(--spacingEnormous);
+    font-size: 1rem;
 }
 
 .instructions ul {
@@ -119,6 +116,7 @@ h3 {
 
 .controlExplanation {
     line-height: var(--spacingEnormous);
+    display: none;
 }
 
 .controlExplanation ul {
@@ -129,14 +127,54 @@ h3 {
     list-style-type: none;
 }
 
-@media (max-width: 900px) {
+.touchControls {
+    display: none;
+}
+
+.instructionsMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
     .touchControls {
+        display: flex;
+        justify-content: space-between;
+        line-height: 60px;
+    }
+
+    .touchControls ul {
+        display: flex;
+    }
+
+    .touchControls .button {
+        margin: 60px;
+    }
+    
+    .instructionsMobile {
+        display: block;
+    }
+
+    .instructions {
         display: none;
+    }
+
+    body {
+        margin: 0px;
+        margin-top: var(--spacingRelaxed)
+    }
+
+    .gameContainer {
+        display: grid;
+        justify-items: center;
     }
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 1201px) {
     .controlExplanation {
-        display: none;
+        display: inline;
+    }
+    .gameContainer {
+        display: flex;
+        justify-content: space-between;
     }
 }
