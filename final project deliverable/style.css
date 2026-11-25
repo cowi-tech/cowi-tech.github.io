@@ -21,6 +21,7 @@
     --spacingNormal: 0.7rem;
     --spacingRelaxed: 1.2rem;
     --spacingHuge: 1.7rem;
+    --spacingEnormous: 2.5rem; /*when not even huge spacing is enough*/
 
     --cornerRadius: 1px;
 }
@@ -37,7 +38,6 @@
 }
 
 /*layout*/
-
 body {
     font-family: var(--siteFont);
     background-color: var(--colorBG);
@@ -51,12 +51,16 @@ nav {
 }
 
 nav .button {
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 }
 
 nav h1 {
     margin-bottom: 20px;
     padding-bottom: 0px;
+}
+
+main {
+    padding-top: var(--spacingNormal);
 }
 
 /*text*/
@@ -75,12 +79,18 @@ h3 {
     color: var(--colorPrimary);
 }
 
+.small-text {
+    font-size: 1rem;
+    color: var(--colorSecondary);
+}
+
 /*components*/
 .button {
     padding: var(--spacingNormal) var(--spacingRelaxed);
     background-color: var(--colorPrimary);
     border-radius: var(--cornerRadius);
     text-decoration: none;
+    color: white;
 }
 
 .displayBox {
@@ -89,4 +99,38 @@ h3 {
     background-color: var(--colorSecondary);
     color: white;
     border-radius: var(--cornerRadius);
+}
+
+/*game specific stuff*/
+.gameContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bestTimes {
+    line-height: var(--spacingEnormous);
+}
+
+.bestTimes ol {
+    padding-left: var(--spacingRelaxed);
+}
+
+.controlExplanation {
+    line-height: var(--spacingEnormous);
+}
+
+.gameContainer ul {
+    list-style-type: none;
+}
+
+@media (max-width: 900px) {
+    .touchControls {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    .controlExplanation {
+        display: none;
+    }
 }
