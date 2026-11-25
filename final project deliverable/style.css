@@ -1,9 +1,9 @@
-/*putting what I've learned in class to use, much to the dismay of my professor*/
-/*entirely handwritten with equal parts love and spite by yours truly*/
-/*master template for all my sites from now on, not just phone phishing. this css will long outlive the AI bubble, fuck claude :)*/
-/*created on 11-24-2026 at 1:10 PM*/
+/*Putting what I've learned in class to use, much to the dismay of my professor*/
+/*Entirely handwritten with equal parts love and spite by yours truly*/
+/*Master template for all my sites from now on, not just phone phishing. This css will long outlive the AI bubble, fuck claude :)*/
+/*Created on 11-24-2026 at 1:10 PM*/
 
-/*global*/
+/*Global*/
 :root {
     /*text colors*/
     --colorPrimary: #C53DFF;
@@ -37,7 +37,7 @@
     box-sizing: border-box;
 }
 
-/*layout*/
+/*Layout*/
 body {
     font-family: var(--siteFont);
     background-color: var(--colorBG);
@@ -63,7 +63,7 @@ main {
     padding-top: var(--spacingNormal);
 }
 
-/*text*/
+/*Text*/
 h1 {
     font-size: 2.5rem;
     color: var(--colorPrimary);
@@ -84,7 +84,7 @@ h3 {
     color: var(--colorSecondary);
 }
 
-/*components*/
+/*Components*/
 .button {
     padding: var(--spacingNormal) var(--spacingRelaxed);
     background-color: var(--colorPrimary);
@@ -101,25 +101,31 @@ h3 {
     border-radius: var(--cornerRadius);
 }
 
-/*game specific stuff*/
+/*Game specific stuff*/
 .gameContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.bestTimes {
+.instructions {
     line-height: var(--spacingEnormous);
 }
 
-.bestTimes ol {
+.instructions ul {
     padding-left: var(--spacingRelaxed);
+    text-wrap: wrap;
+    max-width: 300px;
 }
 
 .controlExplanation {
     line-height: var(--spacingEnormous);
 }
 
-.gameContainer ul {
+.controlExplanation ul {
+    list-style-type: none;
+}
+
+.touchControls ul {
     list-style-type: none;
 }
 
